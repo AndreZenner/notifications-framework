@@ -18,7 +18,6 @@ public class UDPReceive : MonoBehaviour
     private UdpClient client;
     public int port = 9900;
     private string lastReceivedUDPPacket = ";0";
-    //private string allReceivedUDPPackets = ""; // clean up this from time to time!
 
     public void Start()
     {
@@ -67,8 +66,6 @@ public class UDPReceive : MonoBehaviour
 
                 // latest UDPpacket
                 lastReceivedUDPPacket = text;
-
-                //allReceivedUDPPackets = allReceivedUDPPackets + text;
             }
             catch (Exception err)
             {
@@ -82,7 +79,6 @@ public class UDPReceive : MonoBehaviour
      */
     public string getLatestUDPPacket()
     {
-        //allReceivedUDPPackets = "";
         return lastReceivedUDPPacket;
     }
 }
